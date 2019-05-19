@@ -5,15 +5,22 @@
     android:orientation="vertical">
 
     <Button
-        android:id="@+id/button_toast"
+        android:id="@+id/button_display"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Toast" />
-    
+        android:text="显式跳转"/>
+
+
     <Button
-        android:id="@+id/button_back"
+        android:id="@+id/button_hide"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="返回"/>
+        android:text="隐式跳转"/>
+
+    <Button
+        android:id="@+id/button_web"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="跳转到GitHub"/>
 
 </LinearLayout>

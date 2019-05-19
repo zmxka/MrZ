@@ -10,7 +10,7 @@ import android.widget.Toast;
 
 public class FirstActivity extends AppCompatActivity {
 
-    private Button button;
+    private Button button,button1;
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -47,6 +47,12 @@ public class FirstActivity extends AppCompatActivity {
                 Toast.makeText(FirstActivity.this, "这是一个Toast", Toast.LENGTH_LONG).show();
             }
         });
-
+        button1 = (Button) findViewById(R.id.button_back);
+        button1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
     }
 }
