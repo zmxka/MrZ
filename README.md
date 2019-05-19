@@ -2,6 +2,8 @@
 
 解决gradle  "Invalid escape sequence at line 1 column 29 path $[0].name"问题
 
+以下为俩种亲测有效的方法，推荐使用第一个简单便捷
+
 
 1. 在项目的gradle.properties中设置
       
