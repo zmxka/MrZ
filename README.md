@@ -2,7 +2,9 @@
 
 解决gradle  "Invalid escape sequence at line 1 column 29 path $[0].name"问题
 
+
 1. 在项目的gradle.properties中设置
+      
       org.gradle.jvmargs='-Dfile.encoding=UTF-8'
 
 2. 降低gradle版本到3.2.1
