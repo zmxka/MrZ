@@ -1,7 +1,7 @@
 package com.example.mrz;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -10,7 +10,26 @@ import android.widget.Toast;
 
 public class FirstActivity extends AppCompatActivity {
 
-    private Button button,button1;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_first);
+        Button button = (Button) findViewById(R.id.button_toast);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(FirstActivity.this, "这是一个Toast", Toast.LENGTH_LONG).show();
+            }
+        });
+        Button button1 = (Button) findViewById(R.id.button_back);
+        button1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+    }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -25,7 +44,7 @@ public class FirstActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()){
+        switch (item.getItemId()) {
             case R.id.add_item:
                 Toast.makeText(FirstActivity.this, "你点了添加", Toast.LENGTH_LONG).show();
                 break;
@@ -34,25 +53,5 @@ public class FirstActivity extends AppCompatActivity {
                 break;
         }
         return true;
-    }
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_first);
-        button = (Button) findViewById(R.id.button_toast);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(FirstActivity.this, "这是一个Toast", Toast.LENGTH_LONG).show();
-            }
-        });
-        button1 = (Button) findViewById(R.id.button_back);
-        button1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
     }
 }
