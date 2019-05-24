@@ -40,10 +40,14 @@ public class MainActivity extends BaseActive {
         Button button2 = (Button) findViewById(R.id.button_2);
         Button button3 = (Button) findViewById(R.id.button_3);
         Button button4 = (Button) findViewById(R.id.button_4);
+        Button button5 = (Button) findViewById(R.id.button_5);
+        Button button6 = (Button) findViewById(R.id.button_6);
         button.setOnClickListener(this);
         button2.setOnClickListener(this);
         button3.setOnClickListener(this);
         button4.setOnClickListener(this);
+        button5.setOnClickListener(this);
+        button6.setOnClickListener(this);
 
     }
     //接收传递的参数
@@ -87,6 +91,14 @@ public class MainActivity extends BaseActive {
                 break;
             case R.id.button_4:
                 intent = new Intent(this,ListViewActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.button_5:
+                intent = new Intent(this,RecyclerViewActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.button_6:
+                intent = new Intent(this,MaterialActivity.class);
                 startActivity(intent);
                 break;
             default:

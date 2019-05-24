@@ -8,12 +8,14 @@
         android:id="@+id/button_toast"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Toast" />
+        android:text="Toast"
+        android:background="?attr/colorAccent"/>
     
     <Button
         android:id="@+id/button_back"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="返回"/>
+
 
 </LinearLayout>

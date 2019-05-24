@@ -1,5 +1,6 @@
 package com.example.mrz;
 
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -27,6 +28,7 @@ public class FirstActivity extends BaseActive {
                 finish();
             }
         });
+        final Resources.Theme theme = this.getTheme();
     }
 
 
